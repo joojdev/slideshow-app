@@ -26,6 +26,7 @@ async function loadFiles() {
             nextElement.autoplay = true
             nextElement.muted = false
             nextElement.playsInline = true
+            nextElement.controls = false
             nextElement.loop = false
             nextElement.style.width = "100%"
             nextElement.style.height = "100%"
