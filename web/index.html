@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slideshow</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="/eel.js" defer></script>
-    <script src="./main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slideshow Manager</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="/eel.js" defer></script>
+  <script src="./main.js" defer></script>
 </head>
 <body>
-    <label for="filePicker">Selecione imagens e vídeos</label>
-    <input type="file" id="filePicker" accept="image/*,video/*" multiple>
+  <h1>Gerenciador de Slideshow</h1>
 
-    <ul id="fileList"></ul>
+  <!-- Hidden input + visible label button -->
+  <label id="uploadLabel" for="filePicker">Selecionar imagens e vídeos</label>
+  <input type="file" id="filePicker" accept="image/*,video/*" multiple hidden />
 
-    <button id="start">Iniciar slideshow</button>
+  <!-- File list -->
+  <ul id="fileList" class="file-list"></ul>
+
+  <!-- Interval control -->
+  <div class="interval-control">
+    <input type="range" id="interval" step="5" min="5" max="120" />
+    <label for="interval">
+      <span id="intervalValue"></span> segundos
+    </label>
+  </div>
+
+  <!-- Start button -->
+  <button id="start">Iniciar Slideshow</button>
 </body>
 </html>
