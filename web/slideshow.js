@@ -24,7 +24,7 @@ async function loadFiles() {
             nextElement = document.createElement("video")
             nextElement.src = `/content/${file}`
             nextElement.autoplay = true
-            nextElement.muted = true
+            nextElement.muted = false
             nextElement.playsInline = true
             nextElement.loop = false
             nextElement.style.width = "100%"
