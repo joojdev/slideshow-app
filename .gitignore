@@ -32,7 +32,7 @@ MANIFEST
 *.manifest
 build
 dist
-#*.spec
+*.spec
 
 # Installer logs
 pip-log.txt
